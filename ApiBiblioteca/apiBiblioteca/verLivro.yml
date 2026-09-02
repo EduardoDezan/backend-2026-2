@@ -1,0 +1,19 @@
+info:
+  name: verLivro
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://localhost:5243/api/livros/
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+​

@@ -1,0 +1,24 @@
+info:
+  name: deletarLivro
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: http://localhost:5243/api/livros/
+  params:
+    - name: deletarLivro
+      value: "1"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+​

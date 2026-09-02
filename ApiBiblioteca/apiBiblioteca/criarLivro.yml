@@ -1,0 +1,21 @@
+info:
+  name: criarLivro
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5243/api/livros
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Livro show de bola"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
