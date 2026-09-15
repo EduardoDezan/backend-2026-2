@@ -73,4 +73,4 @@ Content-Type: application/json
 * A Collection do Bruno está armazenada na pasta `Bruno`.
 * A API utiliza uma `List<T>` para armazenar os animais.
 
-## [Link do vídeo]()
+## [Link do vídeo](https://drive.google.com/drive/folders/1OE4WDgVvRSFgZ3wzLsDZtNGV-vu4aTY1?usp=drive_link)
