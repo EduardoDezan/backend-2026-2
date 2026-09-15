@@ -1,0 +1,17 @@
+info:
+  name: animaisGet
+  type: http
+
+http:
+  method: GET
+  url: http://localhost:5207/api/animais
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

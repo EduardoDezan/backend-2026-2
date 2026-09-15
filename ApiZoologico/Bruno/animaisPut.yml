@@ -1,0 +1,21 @@
+info:
+  name: animaisPut
+  type: http
+
+http:
+  method: PUT
+  url: http://localhost:5207/api/animais/5
+  body:
+    type: json
+    data: |-
+      {
+        "nome" : "Boto",
+        "saudavel" : false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
