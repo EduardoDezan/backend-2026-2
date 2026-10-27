@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: http://localhost:5050/api/animais/1
+  url: http://localhost:5050/api/animais/9
   body:
     type: json
     data: ""
