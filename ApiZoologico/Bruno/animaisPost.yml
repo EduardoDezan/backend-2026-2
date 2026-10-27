@@ -1,16 +1,17 @@
 info:
   name: animaisPost
   type: http
+  seq: 1
 
 http:
   method: POST
-  url: http://localhost:5207/api/animais
+  url: http://localhost:5050/api/animais
   body:
     type: json
     data: |-
       {
-        "nome" : "Mula",
-        "saudavel" : true
+        "Nome" : "Javali",
+        "Saudavel" : true
       }
   auth: inherit
 
