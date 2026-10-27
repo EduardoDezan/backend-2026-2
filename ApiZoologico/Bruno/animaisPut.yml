@@ -1,15 +1,16 @@
 info:
   name: animaisPut
   type: http
+  seq: 1
 
 http:
   method: PUT
-  url: http://localhost:5207/api/animais/5
+  url: http://localhost:5050/api/animais/1
   body:
     type: json
     data: |-
       {
-        "nome" : "Boto",
+        "nome" : "Gari",
         "saudavel" : false
       }
   auth: inherit

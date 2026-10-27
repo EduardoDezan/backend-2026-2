@@ -1,10 +1,11 @@
 info:
   name: animaisDelete
   type: http
+  seq: 1
 
 http:
   method: DELETE
-  url: http://localhost:5207/api/animais/3
+  url: http://localhost:5050/api/animais/6
   auth: inherit
 
 settings:
