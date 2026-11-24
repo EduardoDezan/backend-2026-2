@@ -5,12 +5,12 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:5050/api/animais/1
+  url: http://localhost:5050/api/animais/14
   body:
     type: json
     data: |-
       {
-        "nome" : "Jacaré",
+        "nome" : "Cegonha",
         "saudavel" : false
       }
   auth: inherit
