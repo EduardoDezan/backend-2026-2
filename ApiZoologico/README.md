@@ -14,8 +14,6 @@ A API também tem uma interface web integrada, permitindo listar, cadastrar, edi
 
 ## Estrutura do projeto
 
-## Estrutura do projeto
-
 ```text
 ApiZoologico/
 ├── Models/
@@ -24,13 +22,17 @@ ApiZoologico/
 │   └── AnimalDto.cs     > Define os dados recebidos nas requisições;
 ├── Data/
 │   └── ApiDbContext.cs  > Gerencia o acesso ao banco de dados;
+│
 ├── Migrations/          > Armazena as alterações da estrutura do banco de dados;
+│
 ├── wwwroot/             > Arquivos do frontend;
 │   ├── app.js
 │   ├── index.html
 │   └── style.css
 ├── Program.cs           > Aplicação, middlewares e endpoints;
+│
 ├── appsettings.json     > Armazena configurações, incluindo a conexão com o banco;
+│
 └── ApiZoologico.csproj  > Dependências e configurações do projeto.
 ```
 
@@ -60,7 +62,6 @@ dotnet run --urls http://localhost:5050
 A aplicação estará disponível em:
 
 - Interface web: [http://localhost:5050/](http://localhost:5050/)
-- API de animais: [http://localhost:5050/api/animais](http://localhost:5050/api/animais)
 
 ## Banco de dados
 
