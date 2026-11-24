@@ -12,6 +12,28 @@ A API também tem uma interface web integrada, permitindo listar, cadastrar, edi
 - Bruno para testar as requisições HTTP.
 - Navegador web para acessar a interface.
 
+## Estrutura do projeto
+
+## Estrutura do projeto
+
+```text
+ApiZoologico/
+├── Models/
+│   └── AnimalEntity.cs  > Representa os animais armazenados no banco;
+├── DTOs/
+│   └── AnimalDto.cs     > Define os dados recebidos nas requisições;
+├── Data/
+│   └── ApiDbContext.cs  > Gerencia o acesso ao banco de dados;
+├── Migrations/          > Armazena as alterações da estrutura do banco de dados;
+├── wwwroot/             > Arquivos do frontend;
+│   ├── app.js
+│   ├── index.html
+│   └── style.css
+├── Program.cs           > Aplicação, middlewares e endpoints;
+├── appsettings.json     > Armazena configurações, incluindo a conexão com o banco;
+└── ApiZoologico.csproj  > Dependências e configurações do projeto.
+```
+
 ## Como executar o projeto
 
 Na pasta do projeto, execute:
@@ -83,7 +105,7 @@ Content-Type: application/json
 ### Atualizar animal com PUT
 
 ```http
-PUT http://localhost:5050/api/animais/3
+PUT http://localhost:5050/api/animais/1
 Content-Type: application/json
 
 {
@@ -95,7 +117,7 @@ Content-Type: application/json
 ### Excluir animal com DELETE
 
 ```http
-DELETE http://localhost:5050/api/animais/3
+DELETE http://localhost:5050/api/animais/1
 ```
 
 ## Interface web
@@ -121,14 +143,13 @@ Os testes permitem verificar os códigos HTTP retornados, as informações dos a
 
 ## Observações
 
-- O projeto mantém o tema e o repositório utilizados na AP1.
-- O armazenamento em memória foi substituído pelo SQLite.
-- O Entity Framework Core é utilizado para consultar e modificar os registros.
+- O projeto mantém o tema e o repositório utilizados na AP1 e AP2.
 - Os dados permanecem disponíveis após reiniciar a API.
 - Os IDs são gerados automaticamente pelo banco e não precisam ser reutilizados após uma exclusão.
-- O arquivo SQLite local com dados de teste não deve ser versionado no Git.
+- O comando dotnet ef database update aplica as migrations e cria ou atualiza o banco SQLite.
 - As migrations permitem preparar o banco de dados em outro ambiente.
+- As migrations registram as alterações na estrutura do banco, não foi usado o EnsureCreated().
 
-## Vídeo de demonstração — AP2
+## Vídeo de demonstração — AS
 
-[Link do vídeo de demonstração](https://drive.google.com/file/d/10cgkqrGCgXvRVw1xV_MRhMcZJqt_KpCY/view?usp=sharing)
+[Link do vídeo de demonstração]()

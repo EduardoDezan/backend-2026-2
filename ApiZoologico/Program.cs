@@ -1,4 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+
+using ApiZoologico.Models;
+using ApiZoologico.Dtos;
+using ApiZoologico.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +16,19 @@ var app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+
+app.UseExceptionHandler(errorApp =>
+{
+    errorApp.Run(async context =>
+    {
+        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+        context.Response.ContentType = "application/json";
+        await context.Response.WriteAsJsonAsync(new
+        {
+            mensagem = "Ocorreu um erro interno, tente novamente mais tarde."
+        });
+    });
+});
 
 app.MapGet("/api/animais", async (ApiDbContext db) =>
 {
@@ -58,18 +76,4 @@ app.MapDelete("/api/animais/{id}", async (int id, ApiDbContext db) =>
 
 app.Run();
 
-class AnimalEntity
-{
-    public int Id { get; set; }
-    public string Nome { get; set; } = string.Empty;
-    public bool Saudavel { get; set; } = true;
-}
 
-class ApiDbContext : DbContext
-{
-    public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
-    {
-    }
-
-    public DbSet<AnimalEntity> Animais => Set<AnimalEntity>();
-}
